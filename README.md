@@ -7,7 +7,7 @@ Ball Sort Puzzle:
 - The balls are distributed randomly among tubes
 - GOAL: sort the balls so, that each tube only contains balls of a single color (all (n) of them)
 - You can only pick the top ball from a tube and move it to a tube that is not already full
-- GOAL 2: Do this in the least moves possible
+- GOAL 2: Reach Goal 1 in the least moves possible
 
 The current algorithm solves the puzzle in attached image (but with one free tube) in:
 - 49 moves
