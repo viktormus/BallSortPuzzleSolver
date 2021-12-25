@@ -9,6 +9,11 @@ Ball Sort Puzzle:
 - You can only pick the top ball from a tube and move it to a tube that is not already full
 - GOAL 2: Reach Goal 1 in the least moves possible
 
+ABOUT THE CODE:
+- This is my first Javascript project that uses object-oriented style
+- A lot of emphasis is placed on readability and short code (eg. tube.balls.length -> tube.n())
+- I try to avoid boilerplate code and use pre-existing methods as much as possible (eg. array.foreach())
+
 The current algorithm solves the puzzle in attached image (but with one free tube) in:
 - 49 moves
 - 7071 loops (ignores printing)
