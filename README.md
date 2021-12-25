@@ -5,9 +5,13 @@ Ball Sort Puzzle:
 - You have (m) tubes, each with max a capacity (n)
 - You have balls of different colors, each color appears (n) times
 - The balls are distributed randomly among tubes
-- GOAL: sort the balls so, that each tube only contains balls of a single color (all n of them)
+- GOAL: sort the balls so, that each tube only contains balls of a single color (all (n) of them)
 - You can only pick the top ball from a tube and move it to a tube that is not already full
 - GOAL 2: Do this in the least moves
 
+The current algorithm solves the puzzle in attached image (but with one free tube) in:
+- 49 moves
+- 7071 loops (ignores printing)
+- 27 recursive calls
 
 NOTE! There are also variations of the basic rules that I outlined above. For example, there could be (x * n) balls of the same color, in which case more than one tube would beed to be filled with that color. Or there could be any number of same-colored balls, and the only goal is to separate them from other colors. Also, apparenlty, the official rule of this puzzle states that you can only move a ball on top of a same-colored ball (& if the tube has free space). I learned this late, which is why this rule is not implemented in my solver.
