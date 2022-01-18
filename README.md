@@ -21,3 +21,9 @@ The current algorithm solves the puzzle in attached image (but with one free tub
 - 380 lines of code
 
 NOTE! There are also variations of the basic rules that I outlined above. For example, there could be (x * n) balls of the same color, in which case more than one tube would beed to be filled with that color. Or there could be any number of same-colored balls, and the only goal is to separate them from other colors. Also, apparenlty, the official rule of this puzzle states that you can only move a ball on top of a same-colored ball (& if the tube has free space). I learned this late, which is why this rule is not implemented in my solver.
+
+
+
+--- Change history ---
+
+2022.1.18: The solver now saves a move sequence, so that it can be compared to other solvers' move sequences
