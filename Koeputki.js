@@ -80,12 +80,15 @@ var i = new Tube(["lg", "bl", "bl", "ye"])
 var j = new Tube([])
 var k = new Tube([])
 
+// Potentially inoptimal behavior by the solver when there's only one re in tube 5
+
 var tubes = [a, b, c, d, e, f, g, h, i, j]
 
 var solver = {
 	loopCount: 0,
 	recursiveCalls: 0,
 	moveCount: 0,
+	moveSequence: "",
 
 	// Simply outputs all tubes with nice visuals
 	// Note! Current settings are for 2-letter-long color names
@@ -314,6 +317,7 @@ var solver = {
 		var targetTube = this.mostSuitableTube(list, fromTube);
 		list[fromTube].placeInto(targetTube);
 		this.printer(list);
+		this.moveSequence += (fromTube + 1) + "->" + (list.indexOf(targetTube) + 1) + ";";
 	},
 
 	// Actual solver algorithm
@@ -352,9 +356,9 @@ var solver = {
 	stats: function() {
 		console.log("")
 		console.log("--- Statistics ---");
+		console.log("Number of moves: " + this.moveCount);
 		console.log("Number of loops: " + this.loopCount + " (ignores printing)");
 		console.log("Number of recursive calls: " + this.recursiveCalls);
-		console.log("Number of moves: " + this.moveCount);
 	},
 
 	intro: function(list) {
@@ -374,6 +378,8 @@ var solver = {
 		this.intro(list);
 		this.solve(list);
 		this.stats();
+		console.log("Move sequence:");
+		console.log(this.moveSequence);
 	}
 }
 
